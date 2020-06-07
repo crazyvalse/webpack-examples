@@ -1,0 +1,26 @@
+{
+  "name": "webpack-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "lerna run start --parallel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazyvalse/webpack-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crazyvalse/webpack-examples/issues"
+  },
+  "homepage": "https://github.com/crazyvalse/webpack-examples#readme",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "moment": "^2.26.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

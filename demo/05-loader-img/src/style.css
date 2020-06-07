@@ -1,0 +1,6 @@
+div {
+    background-color: red;
+    background-image: url("./image.png");
+    width: 600px;
+    height: 600px;
+}
