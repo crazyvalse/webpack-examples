@@ -1,9 +1,11 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
+  mode: 'production',
+  devtool: 'source-map',
   entry: {
-    red: './src/red.js',
     app: './src/index.js'
   },
   devServer: {
@@ -26,9 +28,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: 'index.html',
-      chunks: ['app', 'red']
+      chunks: ['app']
     })
   ]
 }
