@@ -3,6 +3,8 @@ const CompressionPlugin = require('compression-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -10,6 +12,7 @@ module.exports = {
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
+  devtool: 'hidden-source-map',
   optimization: {
     splitChunks: { chunks: 'all' }
   },
@@ -31,11 +34,16 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
     new MomentLocalesPlugin({
       localesToKeep: ['zh-cn'],
     }),
     new CompressionPlugin(),
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin(),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+    })
   ]
 }
