@@ -78,3 +78,6 @@ typings/
 .idea/modules.xml
 .idea/vcs.xml
 .idea/webpack-examples.iml
+.DS_Store
+.idea/inspectionProfiles/Project_Default.xml
+.idea/jsLinters/eslint.xml
