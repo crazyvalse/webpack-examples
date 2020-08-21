@@ -81,3 +81,7 @@ typings/
 .DS_Store
 .idea/inspectionProfiles/Project_Default.xml
 .idea/jsLinters/eslint.xml
+.idea/dictionaries/codingnuts.xml
+.idea/webpack-examples-new.iml
+.idea/encodings.xml
+.idea/dictionaries/zacgu.xml
